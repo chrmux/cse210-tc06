@@ -22,3 +22,5 @@ root                    (project root folder)
 Python 3.8.0
 # Authors
 TODO: Add your names and emails here
+
+Jerry Marollano - jnmarollano@gmail.com
