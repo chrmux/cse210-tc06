@@ -37,7 +37,7 @@ class Director:
         return self.players[self.current]
 
 players = Director()
-players.add_player(players)
+players.get_code(players)
 print("-------------------------------\n")
 print(f"Player {players.name} : ----, ****")
 print(f"Player {players.name} : ----, ****")
