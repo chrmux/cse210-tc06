@@ -33,8 +33,8 @@ class Director:
             if player not in self.players:               
                 self.players.append(player_name)
 
-        self.current = (self.current + 1) % len(self.player_name)
-        return self.players[self.current]
+            player_name = (self.current + 1) % len(self.players)
+        return player_name
 
 players = Director()
 players.get_code(players)
