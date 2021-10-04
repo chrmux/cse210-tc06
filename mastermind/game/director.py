@@ -38,33 +38,5 @@ class Director:
 
 players = Director()
 players.get_code(players)
-print("-------------------------------\n")
-print(f"Player {players.name} : ----, ****")
-print(f"Player {players.name} : ----, ****")
-print("-------------------------------\n")
-print()
-print("Guess the 4 digit number")
-#player one
-print(f"{players.current}'s turn:")
-player_a = int(input("What is your guess? "))
-print()
-print("-------------------------------\n")
-print(f"Player {players.name} : {players.guess}, {players.hint}")
-print(f"Player {players.name} : ----, ****")
-print("-------------------------------\n")
-# player two
-print(f"{players.current}'s turn:")
-player_b = int(input("What is your guess? "))
-print()
-print("-------------------------------\n")
-print(f"Player {players.name} : {players.guess}, {players.hint}")
-print(f"Player {players.name} : {players.guess}, {players.hint}")
-print("-------------------------------\n")
-
-code = str(random.randint(1000, 10000))
-if (player_a == code):
-    print(f"{players} Won!")
-elif (player_b == code):
-    print(f"{players} Won!")
-else:
-    print("End of the Mastermind!")
+code = Code()
+print(code.generate_code(players))
