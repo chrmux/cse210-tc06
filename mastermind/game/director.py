@@ -9,6 +9,7 @@ class Director:
             self (Board): an instance of Board.
     """
     def __init__(self):
+        self.code = Code()
         self.current = -1
         self.players = []
         self.name = []
@@ -28,12 +29,12 @@ class Director:
 
 players = Director()
 players.add_player(players)
-print("Guess the 4 digit number")
 print("-------------------------------\n")
 print(f"Player {players.name} : ----, ****")
 print(f"Player {players.name} : ----, ****")
 print("-------------------------------\n")
 print()
+print("Guess the 4 digit number")
 #player one
 print(f"{players.current}'s turn:")
 player_a = int(input("What is your guess? "))
