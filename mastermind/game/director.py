@@ -17,14 +17,14 @@ class Director:
         self.hint = []
 
 
-    def add_player(self, players):
+    def get_code(self, player_name):
         for n in range(2):
             name = input(f"Enter a name for player {n + 1}: ")
             player = name                                 
             if player not in self.players:               
-                self.players.append(players)
+                self.players.append(player_name)
 
-        self.current = (self.current + 1) % len(self.players)
+        self.current = (self.current + 1) % len(self.player_name)
         return self.players[self.current]
 
 players = Director()
