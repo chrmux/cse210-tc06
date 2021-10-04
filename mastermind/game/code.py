@@ -1,7 +1,10 @@
+import random
+
 class Code:
 
-    def __init__(self, value):
-        self.value = value
+    def __init__(self):
+        pass
         
-    def generate_code():
-      pass
+    def generate_code(self):
+        pass
+  
