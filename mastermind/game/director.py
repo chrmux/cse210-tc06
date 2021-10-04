@@ -3,12 +3,21 @@ import random
 
 
 class Director:
-    """Sets up the board with an entry for each player.
-        
-        Args:
-            self (Board): an instance of Board.
+    """A code template for a person who directs the game. The responsibility of 
+    this class of objects is to control the sequence of play.
+    
+    Stereotype:
+        Controller
+
+    Attributes:
+        code (Hunter): An instance of the class of objects known as Code.
     """
     def __init__(self):
+        """The class constructor.
+        
+        Args:
+            self (Director): an instance of Director.
+        """
         self.code = Code()
         self.current = -1
         self.players = []
