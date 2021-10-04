@@ -27,7 +27,8 @@ class Director:
         return self.players[self.current]
 
 players = Director()
-players.add_player(players)              
+players.add_player(players)
+print("Guess the 4 digit number")
 print("-------------------------------\n")
 print(f"Player {players.name} : ----, ****")
 print(f"Player {players.name} : ----, ****")
