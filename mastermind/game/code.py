@@ -4,50 +4,34 @@ class Code:
     Stereotype: 
         Information Holder
     Attributes:
-        code (Code): An instance of the class of objects known as Code.
-        
+        value (list): Returns the value of the code as a string.
     """
 
     def __init__(self):
-        """
-        value (list): Returns the value of the code as a string.
+        """The class constructor.
         """
         self.value = []
 
 
     
-    def generate_code(self, players):
-        """
-        Print the user input
-        """
-        print("-------------------------------\n")
-        print(f"Player {players.name} : ----, ****")
-        print(f"Player {players.name} : ----, ****")
-        print("-------------------------------\n")
-        print()
-        print("Guess the 4 digit number")
-        #player one
-        print(f"{players.current}'s turn:")
-        player_a = int(input("What is your guess? "))
-        print()
-        print("-------------------------------\n")
-        print(f"Player {players.name} : {players.guess}, {players.hint}")
-        print(f"Player {players.name} : ----, ****")
-        print("-------------------------------\n")
-        # player two
-        print(f"{players.current}'s turn:")
-        player_b = int(input("What is your guess? "))
-        print()
-        print("-------------------------------\n")
-        print(f"Player {players.name} : {players.guess}, {players.hint}")
-        print(f"Player {players.name} : {players.guess}, {players.hint}")
-        print("-------------------------------\n")
+    def generate_code(self, code, guess):
+        """Generates a hint based on the given code and guess.
 
-        code = str(random.randint(1000, 10000))
-        if (player_a == code):
-            print(f"{players} Won!")
-        elif (player_b == code):
-            print(f"{players} Won!")
-        else:
-            print("End of the Mastermind!")
+    Args:
+        self (Board): An instance of Board.
+        code (string): The code to compare with.
+        guess (string): The guess that was made.
+
+    Returns:
+        string: A hint in the form [xxxx]
+    """
+        hint = ''      
+        for index, letter in enumerate(guess):
+            if code[index] == letter:
+                hint += "x"
+            elif letter in guess:
+                hint += "o"
+            else:
+                hint += "*"
+        return hint
   
