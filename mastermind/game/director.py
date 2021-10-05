@@ -10,7 +10,7 @@ class Director:
         Controller
 
     Attributes:
-        code (Hunter): An instance of the class of objects known as Code.
+        code (Code): An instance of the class of objects known as Code.
     """
     def __init__(self):
         """The class constructor.
