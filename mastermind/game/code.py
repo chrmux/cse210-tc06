@@ -4,20 +4,22 @@ class Code:
     Stereotype: 
         Information Holder
     Attributes:
-        value (list): Returns the value of the code as a string.
+        code (Code): An instance of the class of objects known as Code.
+        
     """
 
     def __init__(self):
-        """The class constructor.
-        
-        Args:
-            self (Code): an instance of Code.
+        """
+        value (list): Returns the value of the code as a string.
         """
         self.value = []
 
 
     
     def generate_code(self, players):
+        """
+        Print the user input
+        """
         print("-------------------------------\n")
         print(f"Player {players.name} : ----, ****")
         print(f"Player {players.name} : ----, ****")
